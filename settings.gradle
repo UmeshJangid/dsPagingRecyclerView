@@ -1,0 +1,3 @@
+include ':dsPagingRecyclerView'
+include ':app'
+rootProject.name = "DSPagingRecyclerViewExample"
