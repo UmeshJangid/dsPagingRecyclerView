@@ -9,7 +9,7 @@
         android:orientation="vertical"
         tools:context=".uimain.MainActivity">
 
-        <com.google.android.material.appbar.AppBarLayout
+      <!--  <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
@@ -25,21 +25,21 @@
                 app:theme="@style/MyToolbarTheme"
                 app:title="@string/app_name" />
 
-        </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>-->
 
         <!-- <include layout="@layout/content_main" />-->
-        <TableLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?actionBarSize"
-            app:tabBackground="@color/CadetBlue"
+            app:tabBackground="@color/AliceBlue"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorColor="@color/PaleTurquoise"
             app:tabIndicatorHeight="4dp"
             app:tabMode="fixed">
 
-        </TableLayout>
+        </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"

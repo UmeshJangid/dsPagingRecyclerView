@@ -9,10 +9,12 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by Pranay.
- * <p>
- * Common API Call Helper to make API call.
+ * Project : DSPagingRecyclerViewExample
+ * Created by Umesh Jangid on 21,April,2021
+ * Dotsquares Limited,
+ * Jaipur Rajasthan, India.
  */
+
 public class RxAPICallHelper {
     public RxAPICallHelper() {
     }
@@ -21,7 +23,6 @@ public class RxAPICallHelper {
         if (observable == null) {
             throw new IllegalArgumentException("Observable must not be null.");
         }
-
 
         if (rxAPICallback == null) {
             throw new IllegalArgumentException("Callback must not be null.");

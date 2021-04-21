@@ -44,7 +44,7 @@ object Utils {
     val OOPS_STRING: String = "Oops! Something went wrong, Try Again!"
     var dialog: Dialog? = null
 
-
+    @JvmStatic
     fun hideDialog() {
         if (dialog != null) {
             dialog!!.dismiss()
@@ -191,6 +191,7 @@ object Utils {
             return Environment.MEDIA_MOUNTED == state || Environment.MEDIA_MOUNTED_READ_ONLY == state
         }
 
+    @JvmStatic
     fun showDialog(context: Context) {
         if (dialog != null && dialog!!.isShowing()) {
             dialog!!.dismiss()
@@ -414,6 +415,7 @@ object Utils {
      * @param context the context
      * @return the boolean
      */
+    @JvmStatic
     fun isNetworkConnectedAvailable(context: Context): Boolean {
         val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork = cm.activeNetworkInfo

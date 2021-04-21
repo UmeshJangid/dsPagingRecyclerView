@@ -12,7 +12,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
- * Created by Pranay.
+ * Project : DSPagingRecyclerViewExample
+ * Created by Umesh Jangid on 21,April,2021
+ * Dotsquares Limited,
+ * Jaipur Rajasthan, India.
  */
 
 public class OkHttpProduction {

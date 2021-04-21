@@ -13,8 +13,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Jaipur Rajasthan, India.
  */
 
-class ApiProduction {
-    private static final String BASE_URL = "https://api.stackexchange.com/2.2/";
+public class ApiProduction {
+    private static final String BASE_URL = "https://api.themoviedb.org/3/";
+    public static final String APIKEY = "3c6ce42f2bcf39ccf5b2cab79ab6279f";
+    public static final String language = "en-US";
+    private static final String page = "page";
+
     private Context context;
 
     private ApiProduction(Context context) {

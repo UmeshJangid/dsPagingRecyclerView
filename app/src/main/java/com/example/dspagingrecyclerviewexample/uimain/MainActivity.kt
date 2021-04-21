@@ -11,7 +11,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.dspagingrecyclerviewexample.R
+import com.example.dspagingrecyclerviewexample.adapter.TabAdapter
 import com.example.dspagingrecyclerviewexample.databinding.ActivityMainBinding
+import com.example.dspagingrecyclerviewexample.fragments.Tab1Fragment
+import com.example.dspagingrecyclerviewexample.fragments.Tab2Fragment
+import com.example.dspagingrecyclerviewexample.fragments.Tab3Fragment
 import com.example.dspagingrecyclerviewexample.model.StackOverFlowUserBadgesResponse
 import io.reactivex.disposables.Disposable
 
@@ -22,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private var gold_count = 0
     private var mProgressDialog: ProgressDialog? = null
     private var disposable: Disposable? = null
+    private var adapter: TabAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +34,17 @@ class MainActivity : AppCompatActivity() {
         val binding: ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
         //ButterKnife.bind(this)
-        //setSupportActionBar(toolbar)
+       // setSupportActionBar(binding.toolbar)
         mProgressDialog = ProgressDialog(this)
+        adapter = TabAdapter(supportFragmentManager)
+        adapter!!.addFragment(Tab1Fragment(), "Latest")
+        adapter!!.addFragment(Tab2Fragment(), "Popular")
+        adapter!!.addFragment(Tab3Fragment(), "Upcoming")
+        // adapter!!.addFragment(Tab2Fragment(), "Tab 2")
+        // adapter!!.addFragment(Tab3Fragment(), "Tab 3")
+        binding.viewPager.adapter = adapter
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
+
         /* mProgressDialog!!.setMessage(getString(R.string.str_progress_message))
          if (isInternetAvailable) {
              userBadgeDetails
